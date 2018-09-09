@@ -1,0 +1,67 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <title>CrystalsCollector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Monoton" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <h1>Crystals Collector!</h1>
+    </div>
+    <div class="container">
+        <div id="direction">
+            <p>
+                You will be given a random number at the start of the game.
+            </p>
+
+            <p>
+                There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+            </p>
+
+            <p>
+                You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
+            </p>
+
+            <p>
+                The value of each crystal is hidden from you until you click on it.
+            </p>
+            
+            <p>
+                Each time when the game starts, the game will change the value of each crystal.
+            </p>
+        </div>
+
+        <section class="target-resultbar">
+           
+            <div class="target-resultbaritems" id="target-number">Target Number: </div>
+            
+            <div class="target-resultbaritems" id="win-losscounter">
+                <p>Wins: <span id="wins">0</span></p>
+                <p>Losses: <span id="losses">0</span></p>
+            </div>
+
+        </section>
+
+            <div class="crystals">
+            <img src="assets/images/crystal-1.jpg" alt="crystal-1"/>
+            <img src="assets/images/crystal-2.jpg" alt="crystal-2"/>
+            <img src="assets/images/crystal-3.jpg" alt="crystal-3"/>
+            <img src="assets/images/crystal-4.jpg" alt="crystal-4"/>
+        </div>
+        <div class="result-container">
+            <div id="resultstat">
+                <p>Your total score is:</p>
+            </div>
+            <div id="resultscore">0</div>
+        </div>
+    </div>
+
+    <footer>Thank You For Playing!</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+</body>
+</html>

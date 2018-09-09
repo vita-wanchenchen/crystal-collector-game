@@ -1,0 +1,103 @@
+body {
+    background-image: url("../images/diagmonds_@2X_bg.png")
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: auto;    
+}
+
+h1 {
+    font-family: 'Monoton', cursive;
+    font-size: 50px;
+    background-color: rgb(219, 219, 98);
+    padding: 20px 5px 20px 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#direction {
+    background-color: rgb(182, 214, 119);
+    margin-bottom: 10px;
+    padding: 20px 5px 20px 10px;
+}
+
+#direction p {
+    font-family: 'Crete Round', serif;
+    font-size: 25px;
+    padding-bottom: 15px;
+    line-height: 1.2;
+}
+
+.target-recordbar {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;    
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  
+.target-resultbaritems {
+    padding: 5px;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 10px;    
+    line-height: 2;
+    font-family: 'Crete Round', serif;
+    font-size: 25px;
+  }
+
+#target-number {
+    background-color: rgb(140, 206, 233);
+    width: 48%;
+    float: left;
+}
+
+#win-losscounter {
+    background-color: rgb(182, 172, 240);
+    width: 48%;
+    float: right;
+}
+
+.crystals {
+    clear: both;
+    margin: 10px 0 10px 0;
+    padding: 10px 250px 10px 250px;
+    background-color: rgb(245, 219, 171);
+}
+
+.crystals img {
+    position: relative;
+    margin-top: 5px;
+    width: 80px;
+    margin-left: 10px;
+}
+
+.result-container {
+    font-family: 'Crete Round', serif;
+    font-size: 25px;
+}
+
+#resultstat {
+    background-color: rgb(211, 130, 144);
+    height: 40px;
+    padding: 10px 0 0 5px;
+    border-bottom: dashed;
+}
+
+#resultscore {
+    background-color: rgb(211, 130, 144);
+    height: 150px;
+    font-size: 55px;
+}
+
+footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Crete Round', serif;
+    color: whitesmoke;
+}
