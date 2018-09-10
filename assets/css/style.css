@@ -54,6 +54,9 @@ h1 {
     background-color: rgb(140, 206, 233);
     width: 48%;
     float: left;
+    font-size: 40px;
+    padding: 5px;
+    text-align: center;
 }
 
 #win-losscounter {
