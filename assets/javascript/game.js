@@ -1,7 +1,7 @@
 // Create variables to hold wins, losses, crystalScore, targetScore and totalScore.
 var wins = 0;
 var losses = 0;
-var crystalsValue = [];
+var images = ["./assets/images/crystal-1.jpg", "./assets/images/crystal-2.jpg", "./assets/images/crystal-3.jpg", "./assets/images/crystal-4.jpg"];
 var targetNumber = "";
 var totalScore = 0;
 
@@ -11,29 +11,14 @@ function randomTargetNumber () {
 }
 
 // Set variable crystal value between 1-12.
-/*
-function fourCrystalsValue(){
-	for (var i = 0; i < 4; i++) {
-		var values = Math.floor(Math.random() * 12) + 1;
-		crystalsValue.push(values);
-	}
-	console.log(crystalsValue)
-}
-
-crystalsValue();
-*/
-/*
-var crystal1 = Math.floor(Math.random() * 12) + 1
-var crystal2 = Math.floor(Math.random() * 12) + 1
-var crystal3 = Math.floor(Math.random() * 12) + 1
-var crystal4 = Math.floor(Math.random() * 12) + 1
-*/
-
-function resetCrystalValue () {
-    for (var i = 0; i < 4; i++) {
-        var crystals = $(".crystalsvalue");
-        crystals.attr("value", (Math.floor(Math.random() * 12) + 1));
-        $(".crystalsvalue").append(crystals)
+function resetCrystals () {
+    for (var i = 0; i < images.length; i++) {
+        var crystal = $("<img>");
+        crystal.addClass("crystal");
+        crystal.attr("src", images[i]);
+        crystal.attr("value", (Math.floor(Math.random() * 12) + 1));
+        crystal.attr("height", "100");
+        $(".crystal-images").append(crystal);
     }
 }
 
@@ -42,26 +27,26 @@ function resetHTML () {
     $("#target-number").html(targetNumber);
     $("#win-losscounter").html("<p>Wins: " + wins + "</p>" + "<p>Losses: " + losses + "</p>");
     $(".resultscore").html(totalScore);
-    $(".crystalsvalue").empty();
+    $(".crystal-images").empty();
 }
 
 // function reset the whole game.
 function totalReset () {
     randomTargetNumber ();
-    targetNumber = 0;
+    totalScore = 0;
     resetHTML ();
-    resetCrystalValue ();
+    resetCrystals ();
 }
 
 // Start page setup
 randomTargetNumber();
 resetHTML();
-resetCrystalValue();
+resetCrystals();
 
 // Click function
 function crystalClick () {
     totalScore += parseInt($(this).attr("value"));
-    $(".score-number").html(totalScore);
+    $("#resultscore").html(totalScore);
     if (totalScore == targetNumber) {
         wins++;
         totalReset();
